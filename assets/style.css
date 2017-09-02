@@ -82,8 +82,8 @@ body {
 
 /* Selected Pubs */
 .main-section {
-  margin: 100px 0 0 0;
-  padding-bottom: 30px; }
+  margin: 80px 0 0 0;
+  padding-bottom: 15px; }
 
 .main-section h1 {
   font-family: 'Oswald', sans-serif;
@@ -102,7 +102,7 @@ body {
   color: #50547b;
   font-weight: 900; }
 
-.main-section .publications {
+.main-section .section-list {
   border-top: solid 1px #50547b;
   padding-top: 10px;
   font-size: 14px; }
