@@ -134,7 +134,7 @@ body {
 /* Interns */
 
 .intern { 
-  margin: 12px 0;  
+  margin: 15px 0;  
 }
 
 .intern .intern-bio {
@@ -144,7 +144,7 @@ body {
 
 .intern .intern-bio div {
   display: inline;
-  margin: 0 10px 0 0;
+  margin: 0 6px 0 0;
 }
 
 .intern a {
