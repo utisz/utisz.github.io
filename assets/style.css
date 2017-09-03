@@ -130,6 +130,21 @@ body {
   color: #50547b;
   font-size: 14px; }
 
+
+/* Interns */
+
+.intern { 
+  margin: 10px 0;  
+}
+
+.intern .intern-bio {
+  display: inline-block;
+}
+
+.intern .intern-bio div {
+  display: inline;
+}
+
 /* Papers */
 .paper {
   margin: 5px 0 40px 0;
