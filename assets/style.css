@@ -134,7 +134,7 @@ body {
 /* Interns */
 
 .intern { 
-  margin: 10px 0;  
+  margin: 15px 0;  
 }
 
 .intern .intern-bio {
@@ -143,6 +143,12 @@ body {
 
 .intern .intern-bio div {
   display: inline;
+  margin: 0 15px 0 0;
+}
+
+.intern a {
+  font-weight: 900;
+  color: #50547b;
 }
 
 /* Papers */
