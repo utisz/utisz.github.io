@@ -63,8 +63,9 @@ body {
 /* About */
 #about {
   margin: 27px 0 0 0;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.75px;
   color: #383b56;
   font-weight: 100;
   vertical-align: middle; }
