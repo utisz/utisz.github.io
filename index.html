@@ -8,8 +8,7 @@
     <link href="/assets/new-style.css" media="screen, print" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-  </head>
-  <body>        
+  <body>    
     <div class="overlay"></div>
     <div class="container">
         <div class="content">
@@ -40,5 +39,89 @@
     
         </div>
     </div>
+    <canvas id="cloudCanvas"></canvas>
+    <script src="https://threejs.org/build/three.js"></script>
+
+    <script>
+        var scene, camera, renderer, cloudGeo, cloudMaterial, cloudParticles = [];
+    
+        function init() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(60,window.innerWidth / window.innerHeight,1,1000);
+            camera.position.z = 1;
+            camera.rotation.x = 1.16;
+            camera.rotation.y = -0.12;
+            camera.rotation.z = 0.27;
+    
+            // Set up lighting
+            const ambientLight = new THREE.AmbientLight(0xFFFFFF, 0.5); // soft white light
+            scene.add(ambientLight);
+
+            let ambient = new THREE.AmbientLight(0x555555);
+            scene.add(ambient);
+    
+            renderer = new THREE.WebGLRenderer({ alpha: true }); // make sure our renderer has a transparent background
+            renderer.setClearColor( 0x000000, 0 ); // the default clear color (black) with zero alpha
+            renderer.setSize(window.innerWidth,window.innerHeight);
+            renderer.domElement.id = 'cloudCanvas';
+            document.body.appendChild(renderer.domElement);
+    
+            let loader = new THREE.TextureLoader();
+            loader.load("cloud.png", function(texture){
+                cloudGeo = new THREE.PlaneBufferGeometry(500,500);
+                cloudMaterial = new THREE.MeshLambertMaterial({
+                    map: texture,
+                    transparent: true
+                });
+    
+                for(let p=0; p<12; p++) {
+                    let cloud = new THREE.Mesh(cloudGeo,cloudMaterial);
+                    cloud.position.set(
+                        Math.random()*800 -400,
+                        500,
+                        Math.random()*500 - 450
+                    );
+                    cloud.rotation.x = 1.16;
+                    cloud.rotation.y = -0.12;
+                    cloud.rotation.z = Math.random()*2*Math.PI;
+                    cloud.material.opacity = 0.6;
+                    cloudParticles.push(cloud);
+                    scene.add(cloud);
+                }
+            });
+            render();
+        }
+    
+        function render() {
+    // Update camera projection matrix
+    camera.updateProjectionMatrix();
+  
+    // Create a frustum to check if clouds are in the camera's view
+    let frustum = new THREE.Frustum();
+    frustum.setFromProjectionMatrix(new THREE.Matrix4().multiplyMatrices(camera.projectionMatrix, camera.matrixWorldInverse));
+
+    cloudParticles.forEach(p => {
+        p.position.x += 0.2; // adjust speed to your liking
+
+        // If the cloud is not in the camera's view, reset its position
+        if (!frustum.intersectsObject(p)) {
+            p.position.x = -500; // you may need to adjust this value based on the size of your clouds and the speed they are moving
+            p.position.y = 300 * Math.random() - 100;
+            p.position.z = 500 * Math.random() - 450;
+        }
+    });
+
+    renderer.render(scene, camera);
+    requestAnimationFrame(render);
+}
+
+
+        init();
+    </script>
+    
+    
+        </body>
+    </html>
+    
   </body>
 </html>
