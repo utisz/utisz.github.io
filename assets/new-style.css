@@ -50,6 +50,10 @@ body {
     color: #FF4500;
 }
 
+.emph {
+    font-style: italic;
+}
+
 .social-media {
     display: flex;
     justify-content: center;
