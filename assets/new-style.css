@@ -83,6 +83,9 @@ body {
 
 /* Responsive Design */
 @media (max-width: 800px) {
+    body {
+        padding: 0 10px;
+    }
     .container {
         max-width: 100%;
     }
@@ -91,23 +94,21 @@ body {
         font-size: 1.5em;
     }
 
-    .about-me p {
-        font-size: 0.95em;
-    }
 }
 
 @media (max-width: 500px) {
+
+    body {
+        padding: 0 10px;
+    }
     .container {
         padding: 20px;
     }
 
     .intro {
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
 
-    .about-me p {
-        font-size: 0.9em;
-    }
 }
 
 #cloudCanvas {
