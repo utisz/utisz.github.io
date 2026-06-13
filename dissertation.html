@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Depicting Places in Information Systems | Justin Cranshaw — Ph.D. Dissertation</title>
+    <meta name="description" content="Justin Cranshaw's Ph.D. dissertation from Carnegie Mellon University: Depicting Places in Information Systems — closing the gap between how software represents places and how people actually experience them, through Livehoods, Curated City, and Journeys &amp; Notes.">
+    <meta name="keywords" content="Justin Cranshaw, dissertation, PhD, Carnegie Mellon, Societal Computing, place, HCI, Livehoods, Curated City, Journeys and Notes, urban computing, GeoHCI, social computing">
+    <meta name="author" content="Justin Cranshaw">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://cranshaw.me/dissertation.html">
+
+    <!-- Open Graph / social + AI link unfurls -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Depicting Places in Information Systems — Justin Cranshaw's Ph.D. Dissertation">
+    <meta property="og:description" content="A Carnegie Mellon Ph.D. dissertation on closing the gap between how software represents places and how people actually experience them — through Livehoods, Curated City, and Journeys & Notes.">
+    <meta property="og:url" content="https://cranshaw.me/dissertation.html">
+    <meta property="og:site_name" content="Justin Cranshaw">
+    <meta property="article:author" content="Justin Cranshaw">
+
+    <!-- Twitter / X card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@justincranshaw">
+    <meta name="twitter:creator" content="@justincranshaw">
+    <meta name="twitter:title" content="Depicting Places in Information Systems — Justin Cranshaw's Ph.D. Dissertation">
+    <meta name="twitter:description" content="A Carnegie Mellon Ph.D. dissertation on closing the gap between how software represents places and how people actually experience them.">
+
+    <!-- Structured data: Thesis (machine-readable facts for search + AI agents) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Thesis",
+      "inSupportOf": "Doctor of Philosophy (Ph.D.) in Societal Computing",
+      "name": "Depicting Places in Information Systems: Closing the Gap Between Representation and Experience",
+      "url": "https://cranshaw.me/dissertation.html",
+      "headline": "Depicting Places in Information Systems",
+      "abstract": "Most software treats a place as a dot on a map. This dissertation argues that places are centers of meaning and experience, and explores how to close the gap between how information systems represent places and how people actually live them — through the projects Livehoods, Curated City, and Journeys & Notes.",
+      "datePublished": "2022",
+      "author": {
+        "@type": "Person",
+        "name": "Justin Cranshaw",
+        "url": "https://cranshaw.me/"
+      },
+      "publisher": {
+        "@type": "CollegeOrUniversity",
+        "name": "Carnegie Mellon University",
+        "url": "https://www.cmu.edu/"
+      },
+      "about": [
+        "Human-Computer Interaction",
+        "Urban Computing",
+        "Societal Computing",
+        "Sense of place",
+        "Social Computing",
+        "GeoHCI"
+      ],
+      "mainEntityOfPage": "https://cranshaw.me/dissertation.html",
+      "associatedMedia": {
+        "@type": "MediaObject",
+        "contentUrl": "https://cranshaw.me/assets/cranshaw-dissertation.pdf",
+        "encodingFormat": "application/pdf"
+      }
+    }
+    </script>
+
+    <link href="/assets/dissertation.css?v=1" media="screen, print" rel="stylesheet" type="text/css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#003A5D">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  </head>
+  <body>
+    <!-- Drifting cloud background, shared with the home page. Fallback CSS
+         layers show only when WebGL is unavailable. -->
+    <div class="overlay" id="cloudFallback" aria-hidden="true">
+        <div class="cloud-layer cloud-layer--far"></div>
+        <div class="cloud-layer cloud-layer--near"></div>
+    </div>
+    <canvas id="cloudCanvas" aria-hidden="true"></canvas>
+
+    <main class="page">
+        <a class="back" href="/"><i class="fa-solid fa-arrow-left"></i> Justin Cranshaw</a>
+
+        <!-- HERO -->
+        <header class="card hero">
+            <p class="eyebrow">Ph.D. Dissertation · Carnegie Mellon University</p>
+            <h1>Depicting Places in Information Systems</h1>
+            <p class="subtitle">Closing the Gap Between Representation and Experience</p>
+            <p class="lead">
+                Most software treats a place as a dot on a map — a pair of coordinates with a name attached.
+                But places are where life actually happens: centers of meaning, memory, and shared experience.
+                My dissertation is about closing the gap between how our information systems <em>represent</em> places
+                and how we actually <em>live</em> them — and why narrowing that gap matters for everyone.
+            </p>
+            <div class="actions">
+                <a class="btn btn--primary" href="/assets/cranshaw-dissertation.pdf">
+                    <i class="fa-solid fa-file-pdf"></i> Read the dissertation
+                </a>
+                <a class="btn btn--ghost" href="https://scholar.google.com/citations?user=n5VgPKIAAAAJ&hl=en" target="_blank" rel="noopener">
+                    <i class="fa-solid fa-graduation-cap"></i> Google Scholar
+                </a>
+            </div>
+        </header>
+
+        <!-- WHY IT MATTERS -->
+        <section class="card">
+            <p class="section-label">The problem</p>
+            <h2>Computing has become the lens we see places through</h2>
+            <p>
+                Over the last three decades, information systems have quietly become the middleware between people
+                and the physical world. We find places to eat on Yelp, get directions from Google Maps, plan trips
+                on Airbnb, and learn about our neighborhoods on Nextdoor. These platforms increasingly
+                <em>mediate</em> how we encounter, choose, and remember the places in our lives.
+            </p>
+            <p>
+                But they are remarkably reductive about it: a place becomes a point in 2D space, an averaged star
+                rating, a fixed boundary on a map. That flattening doesn't stay on the screen. These representations
+                feed consequential decisions — resource allocation, investment, research — and when they are
+                impoverished, the cost can land on real communities, in perpetuated stereotypes and erased
+                cultural identity.
+            </p>
+            <blockquote class="quote">
+                “What begins as undifferentiated space becomes place as we get to know it better and endow it with value.”
+                <cite>Yi-Fu Tuan, <em>Space and Place</em>, 1977</cite>
+            </blockquote>
+            <p>
+                <strong>My thesis:</strong> by closing the gaps between how places are represented and how they are
+                experienced, we can design social information systems that are more insightful and more meaningful —
+                not just for the people who use them, but for everyone who lives in the places they depict.
+            </p>
+        </section>
+
+        <!-- THE FOUR GAPS -->
+        <section class="card">
+            <p class="section-label">The gaps</p>
+            <h2>Four ways software gets place wrong</h2>
+            <div class="grid">
+                <div class="gap">
+                    <h3>Static, not dynamic</h3>
+                    <p>Systems treat a place as fixed context. Real places are ecosystems in constant motion —
+                       reshaped by social, political, cultural, and natural forces, and different from season to
+                       season, even from day to night.</p>
+                </div>
+                <div class="gap">
+                    <h3>Singular, not multitudinous</h3>
+                    <p>A place gets one identity and one rating. But every place contains multitudes — as many
+                       identities as the people and communities who claim it, each with their own perspective.</p>
+                </div>
+                <div class="gap">
+                    <h3>Located, not placeless</h3>
+                    <p>Systems demand a fixed location. Yet some places move (the bar car of a commuter train),
+                       and some have no coordinates at all (an online community).</p>
+                </div>
+                <div class="gap">
+                    <h3>Physical, not blended</h3>
+                    <p>Software treats the physical and the digital as separate worlds. In practice, the boundary
+                       between a place and its digital reflection is increasingly — and productively — blurry.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE THREE SYSTEMS -->
+        <section>
+            <div class="card">
+                <p class="section-label">The work</p>
+                <h2>Three systems, built and studied in the wild</h2>
+                <p>
+                    Rather than argue from theory, I took a research-through-design approach: I designed, built, and
+                    evaluated three working systems, each closing a different gap. Together they trace a path toward
+                    location-based software that feels less like a database and more like a place.
+                </p>
+
+                <article class="system">
+                    <p class="meta">Livehoods · ICWSM 2012 · <span class="award">Best Paper Award · Test of Time Award (2022)</span></p>
+                    <h3>Livehoods</h3>
+                    <p class="question">How can a map of a city evolve the way the city itself does?</p>
+                    <p>
+                        Municipal maps draw neighborhoods as fixed areas that tile the city and rarely change.
+                        Livehoods instead discovers neighborhoods from the ground up, clustering more than
+                        <strong>18 million location check-ins</strong> shared on social media to reveal the collective
+                        activity of a city — a map that can evolve as neighborhoods do. An interview study with 27
+                        Pittsburgh residents probed how these data-driven boundaries relate to both lived experience
+                        and the official municipal borders, surfacing stories of transition, identity, and the
+                        digital divide.
+                    </p>
+                    <p class="links">
+                        <a href="https://livehoods.org" target="_blank" rel="noopener">livehoods.org <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.8em"></i></a>
+                        <a href="https://livehoods.org/livehoods_icwsm12.pdf" target="_blank" rel="noopener">Read the paper</a>
+                    </p>
+                </article>
+
+                <article class="system">
+                    <p class="meta">Curated City · CHI 2014</p>
+                    <h3>Curated City</h3>
+                    <p class="question">How can a city guide hold more than one truth?</p>
+                    <p>
+                        Ratings collapse a place into a single number; reviews bury it in long, subjective prose.
+                        Curated City is a social city guide that represents places as a <em>multitude</em> of personal
+                        experiences instead of one averaged verdict. People create and remix each other's guides, so
+                        the individual and collective views of the city coexist — accentuating the commonalities
+                        across experiences without forcing anyone to label a place simply “good” or “bad.” A two-week
+                        field trial with 20 Pittsburgh residents produced nine design implications for guides built
+                        on this plurality.
+                    </p>
+                    <p class="links">
+                        <a href="https://dl.acm.org/doi/10.1145/2556288.2557401" target="_blank" rel="noopener">Read the paper</a>
+                    </p>
+                </article>
+
+                <article class="system">
+                    <p class="meta">Journeys &amp; Notes · CHI 2016</p>
+                    <h3>Journeys &amp; Notes</h3>
+                    <p class="question">How do you give a sense of place to somewhere that isn't one?</p>
+                    <p>
+                        Airports, overpasses, rest stops, bus terminals — the anthropologist Marc Augé called these
+                        <em>non-places</em>: transient, undifferentiated spaces that lack the qualities for a sense of
+                        place to take root, yet fill an ever-larger share of modern life. Journeys &amp; Notes is an
+                        Android app that turns the time we spend in motion into a shared virtual place, where
+                        travelers connect with one another and reflect on the moment. A large-scale field study
+                        reached <strong>9,435 participants</strong>, showing how social computing can nurture place
+                        where the physical world offers none.
+                    </p>
+                    <p class="links">
+                        <a href="https://dl.acm.org/doi/10.1145/2858036.2858573" target="_blank" rel="noopener">Read the paper</a>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- THE FRAMEWORK -->
+        <section class="card">
+            <p class="section-label">The framework</p>
+            <h2>Six dimensions of place, for the people who build with it</h2>
+            <p>
+                I distilled what I learned building these systems — together with the place literature in geography,
+                anthropology, and sociology — into six qualitative dimensions of place, paired with 18 guiding
+                questions, to help designers reason about place as a lived space rather than a coordinate.
+            </p>
+            <div class="dims">
+                <div class="dim"><h3>Scale</h3><p>Places range from the small and personal to the vast and all-encompassing.</p></div>
+                <div class="dim"><h3>Transformation</h3><p>Places are always in a state of change — across years and across a single day.</p></div>
+                <div class="dim"><h3>Interconnectedness</h3><p>Tangled webs of links between people, objects, infrastructure, and other places.</p></div>
+                <div class="dim"><h3>Openness</h3><p>Flows of people, culture, ideas, and capital pass into and out of a place, across borders.</p></div>
+                <div class="dim"><h3>Throwntogetherness</h3><p>The chance of distinct lives and trajectories meeting — or not — at the same place.</p></div>
+                <div class="dim"><h3>Politics</h3><p>Places are governed by power, and that power is never evenly apportioned.</p></div>
+            </div>
+        </section>
+
+        <!-- WHY IT MATTERS NOW -->
+        <section class="card">
+            <p class="section-label">Why it matters now</p>
+            <h2>The stakes only grow from here</h2>
+            <p>
+                As information systems become ever more the lens through which we encounter the world, the cost of
+                getting place wrong only compounds. The Livehoods paper won <strong>Best Paper at ICWSM in 2012</strong>,
+                and ten years later the same venue awarded it the <strong>Test of Time Award</strong>, which recognizes
+                research whose influence has endured.
+            </p>
+            <p>
+                The north star of this work is a future where the sense of a place flows seamlessly between the
+                physical world and its virtual counterparts, and where location-based systems are more place-like.
+                This dissertation is a set of concrete steps toward that vision — in working systems, and in ideas
+                other builders can take further.
+            </p>
+            <div class="actions">
+                <a class="btn btn--primary" href="/assets/cranshaw-dissertation.pdf">
+                    <i class="fa-solid fa-file-pdf"></i> Read the full dissertation
+                </a>
+            </div>
+        </section>
+
+        <!-- COLOPHON -->
+        <footer class="colophon">
+            <p>
+                <strong>Depicting Places in Information Systems: Closing the Gap Between Representation and Experience.</strong><br>
+                Justin Cranshaw · Ph.D. in Societal Computing, School of Computer Science, Carnegie Mellon University · CMU-ISR-22-106, May 2022.<br>
+                Committee: Norman Sadeh (Chair), Jason Hong, Aniket Kittur, and Andrés Monroy-Hernández (Princeton University).
+            </p>
+        </footer>
+    </main>
+
+    <script src="/assets/clouds.js?v=5" defer></script>
+  </body>
+</html>

@@ -1,0 +1,326 @@
+/* dissertation.css — long-form page for the dissertation summary.
+   Shares the look of the home page (cloud gradient, Oswald + Roboto, coral
+   accent, dark translucent cards) but allows vertical scrolling. The cloud
+   canvas/fallback markup and clouds.js are reused verbatim from index.html. */
+
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+    --coral: #FF7F50;
+    --coral-hot: #FF4500;
+    --card: rgba(0, 0, 0, 0.7);
+    --card-soft: rgba(0, 0, 0, 0.55);
+    --hairline: rgba(255, 255, 255, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Same 7-stop sky as the home page, pinned to the viewport so it lines up
+       with the fixed cloud canvas while the content scrolls over it. */
+    background: linear-gradient(to bottom, #003A5D, #004E74, #00769B, #829EAD, #918E8F, #B18A76, #984D39) fixed;
+    color: white;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--coral); text-decoration: none; }
+a:hover { color: var(--coral-hot); }
+
+/* ---- layout ---------------------------------------------------------- */
+.page {
+    position: relative;
+    z-index: 2;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 32px 30px 90px;
+}
+
+.back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 36px;
+}
+.back:hover { color: var(--coral); }
+
+section { margin-top: 28px; }
+
+/* ---- cards ----------------------------------------------------------- */
+.card {
+    background: var(--card);
+    border: 1px solid var(--hairline);
+    border-radius: 15px;
+    padding: 44px 48px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* ---- hero ------------------------------------------------------------ */
+.hero .eyebrow {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 0.82em;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--coral);
+    margin: 0 0 18px;
+}
+
+.hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 2.7em;
+    line-height: 1.12;
+    margin: 0 0 10px;
+}
+
+.hero .subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 1.4em;
+    line-height: 1.3;
+    color: rgba(255, 255, 255, 0.82);
+    margin: 0 0 28px;
+}
+
+.hero .lead {
+    font-size: 1.12em;
+    margin: 0;
+}
+
+.hero .lead + .lead { margin-top: 18px; }
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 34px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    padding: 13px 24px;
+    border-radius: 50px;
+    border: 1px solid var(--coral);
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.15s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+
+.btn--primary { background: var(--coral); color: #1a1a1a; }
+.btn--primary:hover { background: var(--coral-hot); color: white; }
+
+.btn--ghost { background: rgba(255, 127, 80, 0.12); color: white; }
+.btn--ghost:hover { background: var(--coral-hot); color: white; }
+
+/* ---- section headings ------------------------------------------------ */
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 1.7em;
+    margin: 0 0 18px;
+}
+
+.section-label {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-size: 0.78em;
+    color: var(--coral);
+    margin: 0 0 10px;
+}
+
+.card p { font-size: 1.06em; }
+.card p:last-child { margin-bottom: 0; }
+
+/* ---- pull quote ------------------------------------------------------ */
+.quote {
+    border-left: 3px solid var(--coral);
+    padding: 4px 0 4px 24px;
+    margin: 30px 0;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 1.45em;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.92);
+}
+.quote cite {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 0.5em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 14px;
+}
+
+/* ---- gaps grid ------------------------------------------------------- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.gap {
+    background: var(--card-soft);
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    padding: 24px 26px;
+}
+.gap h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 1.12em;
+    margin: 0 0 8px;
+    color: var(--coral);
+}
+.gap p { margin: 0; font-size: 0.98em; line-height: 1.6; }
+
+/* ---- systems --------------------------------------------------------- */
+.system { margin-top: 20px; }
+.system + .system { margin-top: 18px; }
+
+.system .meta {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 0.72em;
+    color: rgba(255, 255, 255, 0.55);
+    margin: 0 0 10px;
+}
+.system .award { color: var(--coral); }
+
+.system h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    margin: 0 0 4px;
+}
+.system .question {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.12em;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 16px;
+}
+.system p { margin: 0 0 0; }
+.system .links { margin-top: 16px; font-size: 0.95em; }
+.system .links a { margin-right: 18px; }
+
+/* ---- dimensions ------------------------------------------------------ */
+.dims {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
+.dim {
+    background: var(--card-soft);
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    padding: 20px 22px;
+}
+.dim h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 1.05em;
+    margin: 0 0 6px;
+    color: var(--coral);
+}
+.dim p { margin: 0; font-size: 0.92em; line-height: 1.55; color: rgba(255, 255, 255, 0.85); }
+
+/* ---- footer ---------------------------------------------------------- */
+.colophon {
+    margin-top: 28px;
+    font-size: 0.9em;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+}
+.colophon strong { color: rgba(255, 255, 255, 0.92); font-weight: 500; }
+
+/* ---- responsive ------------------------------------------------------ */
+@media (max-width: 720px) {
+    .page { padding: 24px 16px 70px; }
+    .card { padding: 30px 24px; }
+    .hero h1 { font-size: 2.05em; }
+    .hero .subtitle { font-size: 1.2em; }
+    .grid { grid-template-columns: 1fr; }
+    .dims { grid-template-columns: 1fr 1fr; }
+    .quote { font-size: 1.25em; }
+}
+
+@media (max-width: 440px) {
+    .dims { grid-template-columns: 1fr; }
+    .actions .btn { width: 100%; justify-content: center; }
+}
+
+/* ---- cloud background (mirrors new-style.css) ------------------------ */
+#cloudCanvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+#cloudCanvas.ready { opacity: 1; }
+
+#cloudFallback {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+    display: none;
+}
+html.clouds-fallback #cloudFallback { display: block; }
+
+#cloudFallback .cloud-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-image: url(/cloud.png);
+    background-repeat: repeat-x;
+    will-change: transform;
+}
+#cloudFallback .cloud-layer--far {
+    background-size: 25% auto;
+    background-position: center 30%;
+    opacity: 0.28;
+    animation: drift 160s linear infinite;
+}
+#cloudFallback .cloud-layer--near {
+    background-size: 50% auto;
+    background-position: center 55%;
+    opacity: 0.45;
+    animation: drift 90s linear infinite;
+}
+@keyframes drift {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+    #cloudCanvas { transition: none; }
+    #cloudFallback .cloud-layer { animation: none; }
+}
