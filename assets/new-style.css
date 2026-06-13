@@ -1,6 +1,9 @@
 
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+/* Newsreader (Production Type, OFL) — editorial display serif, shared with the
+   Vellum brand and the dissertation page. Used for the intro headline. */
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -27,9 +30,12 @@ body {
 }
 
 .intro {
-    font-family: 'Oswald', sans-serif;
-    font-size: 2em;
-    font-weight: 500;
+    font-family: 'Newsreader', Georgia, serif;
+    font-optical-sizing: auto;
+    font-size: 2.3em;
+    font-weight: 540;
+    line-height: 1.12;
+    letter-spacing: -0.01em;
     text-align: left;
     margin-bottom: 40px;
 }
@@ -53,7 +59,9 @@ body {
 }
 
 .emph {
+    font-family: 'Newsreader', Georgia, serif;
     font-style: italic;
+    font-weight: 500;
 }
 
 .social-media {
@@ -91,7 +99,7 @@ body {
     }
 
     .intro {
-        font-size: 1.5em;
+        font-size: 1.7em;
     }
 
 }
@@ -106,7 +114,7 @@ body {
     }
 
     .intro {
-        font-size: 1.3em;
+        font-size: 1.5em;
     }
 
 }
